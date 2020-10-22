@@ -10,11 +10,11 @@ namespace ProjectLibrary
         {
             List<StudentInfo> students = new List<StudentInfo>
             {
-                new StudentInfo("Thrawn", "Rentor", "Ysalamiri Roast"),
-                new StudentInfo("Palpatine", "Corellia", "Absithe"),
                 new StudentInfo("Anakin", "Tatooine", "Blue Milk"),
                 new StudentInfo("Boba Fett", "Kamino", "Uj Cake"),
                 new StudentInfo("Krennic", "Lexru", "Just Desserts"),
+                new StudentInfo("Palpatine", "Corellia", "Absithe"),
+                new StudentInfo("Thrawn", "Rentor", "Ysalamiri Roast")
             };
 
             while (true)
@@ -101,6 +101,7 @@ namespace ProjectLibrary
 
         public static void PrintStudentRoster(List<StudentInfo> students)
         {
+            MyLibs.ConsoleLibrary.DrawTitle("Current Roster", "section");
 
             for (int i = 0; i < students.Count; i++)
             {

@@ -21,13 +21,13 @@ namespace MyLibs
             return userResponse;
         }
 
-        public static bool UserWantsToContinue(string originalQuery, string failResponse)
+        public static bool UserWantsToContinue(string originalQuery, string errorMessage)
         {
             string userResponse = GetUserResponse($"{originalQuery} (y/n)").ToLower(); ;
 
             while (userResponse != "n" && userResponse != "y")
             {
-                userResponse = GetUserResponse($"{failResponse} {originalQuery} (y/n)").ToLower();
+                userResponse = GetUserResponse($"{errorMessage} {originalQuery} (y/n)").ToLower();
             }
 
             if (userResponse == "n")
